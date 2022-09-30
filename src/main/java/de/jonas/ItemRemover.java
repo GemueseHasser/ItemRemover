@@ -65,7 +65,7 @@ public final class ItemRemover extends JavaPlugin {
         new ItemRemoveTask().runTaskTimer(
             this,
             0,
-            ((long) removePeriod * 20 * 60) - (20 * ItemRemoveTask.BOSSBAR_DURATION)
+            (long) removePeriod * 20 * 60
         );
 
         getLogger().info("Das Plugin wurde erfolgreich aktiviert!");
