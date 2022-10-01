@@ -53,6 +53,7 @@ public final class BossBarTask extends BukkitRunnable {
                 public void run() {
                     // remove boss-bar
                     BOSS_BAR.removeAll();
+                    BOSS_BAR.setColor(BarColor.PINK);
                 }
             }.runTaskLater(ItemRemover.getInstance(), ItemRemover.getInstance().getRemovedDisplayTime() * 20L);
 
