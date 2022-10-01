@@ -32,6 +32,9 @@ public final class ItemRemover extends JavaPlugin {
     @Getter
     @NotNull
     private final List<World> worlds = new ArrayList<>();
+    /** Die Dauer in Sekunden, die die Anzahl an entfernten Items in der BossBar angezeigt werden soll. */
+    @Getter
+    private int removedDisplayTime;
     //</editor-fold>
 
 
@@ -49,6 +52,7 @@ public final class ItemRemover extends JavaPlugin {
 
         // load config values
         final int removePeriod = getConfig().getInt("removePeriodMinutes");
+        this.removedDisplayTime = getConfig().getInt("removedDisplayTimeSeconds");
 
         for (@NotNull final String worldName : getConfig().getStringList("worlds")) {
             final World world = Bukkit.getWorld(worldName);

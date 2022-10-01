@@ -1,3 +1,4 @@
 removePeriodMinutes: 1
+removedDisplayTimeSeconds: 5
 worlds:
   - 'world'
